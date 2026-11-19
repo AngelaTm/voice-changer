@@ -22,7 +22,7 @@ export const Portrait = (_props: PortraitProps) => {
     const beatriceFemaleSpeakersList = [2, 4, 7, 8, 10, 14, 15, 16, 17, 18, 19, 24, 25, 26, 27, 29, 30, 35, 36, 38, 39, 40, 43, 51, 53, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 69, 72, 82, 83, 84, 85, 90, 91, 92, 93, 94, 95, 96];
 
     useMemo(() => {
-        messageBuilderState.setMessage(__filename, "terms_of_use", { ja: "利用規約", en: "terms of use" });
+        messageBuilderState.setMessage(__filename, "terms_of_use", { ja: "利用規約", en: "ketentuan penggunaan" });
     }, []);
 
     const selected = useMemo(() => {
@@ -152,7 +152,7 @@ export const Portrait = (_props: PortraitProps) => {
                                 setBeatriceSpeakerType(BeatriceSpeakerType.male);
                             }}
                         >
-                            male
+                            pria
                         </div>
                         <div
                             className={femaleButtonClass}
@@ -160,7 +160,7 @@ export const Portrait = (_props: PortraitProps) => {
                                 setBeatriceSpeakerType(BeatriceSpeakerType.female);
                             }}
                         >
-                            female
+                            wanita
                         </div>
                     </div>
                     {/* <iframe className="beatrice-speaker-graph-container" style={{ width: "20rem", height: "20rem", border: "none" }} src="./assets/beatrice/female-clickable.svg" title="terms_of_use" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe> */}
