@@ -19,7 +19,7 @@ export const ModelSlotArea = (_props: ModelSlotAreaProps) => {
     const [sortType, setSortType] = useState<SortTypes>("slot");
 
     useMemo(() => {
-        messageBuilderState.setMessage(__filename, "edit", { ja: "編集", en: "edit" });
+        messageBuilderState.setMessage(__filename, "edit", { ja: "編集", en: "ubah" });
     }, []);
 
     const modelTiles = useMemo(() => {
@@ -53,7 +53,7 @@ export const ModelSlotArea = (_props: ModelSlotAreaProps) => {
                         </>
                     ) : (
                         <>
-                            <div className="model-slot-tile-icon-no-entry">no image</div>
+                            <div className="model-slot-tile-icon-no-entry">tanpa gambar</div>
                             <div className="model-slot-tile-vctype">{x.voiceChangerType}</div>
                         </>
                     );
