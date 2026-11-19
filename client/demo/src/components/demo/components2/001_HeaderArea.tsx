@@ -19,9 +19,9 @@ export const HeaderArea = (props: HeaderAreaProps) => {
 
     useMemo(() => {
         messageBuilderState.setMessage(__filename, "github", { ja: "github", en: "github" });
-        messageBuilderState.setMessage(__filename, "manual", { ja: "マニュアル", en: "manual" });
-        messageBuilderState.setMessage(__filename, "screenCapture", { ja: "録画ツール", en: "Record Screen" });
-        messageBuilderState.setMessage(__filename, "support", { ja: "支援", en: "Donation" });
+        messageBuilderState.setMessage(__filename, "manual", { ja: "マニュアル", en: "panduan" });
+        messageBuilderState.setMessage(__filename, "screenCapture", { ja: "録画ツール", en: "Perekam Layar" });
+        messageBuilderState.setMessage(__filename, "support", { ja: "支援", en: "Donasi" });
     }, []);
 
     const githubLink = useMemo(() => {
@@ -141,7 +141,7 @@ export const HeaderArea = (props: HeaderAreaProps) => {
                     </span>
                     <span className="belongings">
                         <div className="belongings-button" onClick={onClearSettingClicked}>
-                            clear setting
+                            hapus pengaturan
                         </div>
                         {/* <div className="belongings-button" onClick={onReloadClicked}>reload</div>
                         <div className="belongings-button" onClick={onReselectVCClicked}>select vc</div> */}
