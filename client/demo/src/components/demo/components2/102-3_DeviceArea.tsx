@@ -28,7 +28,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                     <div className="config-sub-area-control-field">
                         <div className="config-sub-area-buttons">
                             <div onClick={reloadDeviceInfo} className="config-sub-area-button">
-                                reload
+                                muat ulang
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
 
         const onDeviceModeChanged = (val: number) => {
             if (isConverting) {
-                alert("cannot change mode when voice conversion is enabled");
+                alert("Mode tidak dapat diubah saat konversi suara sedang berjalan");
                 return;
             }
             serverSetting.updateServerSettings({ ...serverSetting.serverSetting, enableServerAudio: val });
@@ -62,7 +62,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                                     onDeviceModeChanged(0);
                                 }}
                             />{" "}
-                            <label htmlFor="client-device">client</label>
+                            <label htmlFor="client-device">klien</label>
                         </div>
                         <div className="config-sub-area-noise-checkbox-container">
                             <input
@@ -80,7 +80,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
 
                         <div className="config-sub-area-buttons">
                             <div onClick={reloadDeviceInfo} className="config-sub-area-button">
-                                reload
+                                muat ulang
                             </div>
                         </div>
                     </div>
@@ -197,7 +197,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                             }}
                         >
                             <option value="ALL" key="ALL">
-                                ALL
+                                SEMUA
                             </option>
                             {hostAPIOptions}
                         </select>
@@ -210,7 +210,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                         >
                             {filteredDevice}
                             <option value="-1" key="none">
-                                none
+                                tidak ada
                             </option>
                         </select>
                     </div>
@@ -289,7 +289,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                                 setFileInputEchoback(!fileInputEchoback);
                             }}
                         >
-                            echo{fileInputEchoback}
+                            gema{fileInputEchoback}
                         </div>
                     </div>
                 </div>
@@ -378,7 +378,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                                 onSelectScreenClicked();
                             }}
                         >
-                            capture
+                            tangkap
                         </div>
                     </div>
                 </div>
@@ -539,7 +539,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                             }}
                         >
                             <option value="ALL" key="ALL">
-                                ALL
+                                SEMUA
                             </option>
                             {hostAPIOptions}
                         </select>
@@ -552,7 +552,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                         >
                             {filteredDevice}
                             <option value="-1" key="none">
-                                none
+                                tidak ada
                             </option>
                         </select>
                     </div>
@@ -580,14 +580,14 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
         const stopClassName = outputRecordingStarted ? "config-sub-area-button" : "config-sub-area-button-active";
         return (
             <div className="config-sub-area-control">
-                <div className="config-sub-area-control-title">REC.</div>
+                <div className="config-sub-area-control-title">REK.</div>
                 <div className="config-sub-area-control-field">
                     <div className="config-sub-area-buttons">
                         <div onClick={onOutputRecordStartClicked} className={startClassName}>
-                            start
+                            mulai
                         </div>
                         <div onClick={onOutputRecordStopClicked} className={stopClassName}>
-                            stop
+                            henti
                         </div>
                     </div>
                 </div>
@@ -749,7 +749,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
             .filter((x) => x != null);
         filteredDevice.unshift(
             <option value={-1} key={-1}>
-                none
+                tidak ada
             </option>,
         );
 
@@ -774,7 +774,7 @@ export const DeviceArea = (_props: DeviceAreaProps) => {
                             }}
                         >
                             <option value="ALL" key="ALL">
-                                ALL
+                                SEMUA
                             </option>
                             {hostAPIOptions}
                         </select>
